@@ -1,14 +1,16 @@
-package net.fabricmc.example;
+package eu.diedullis.mod;
 
+import com.jagrosh.discordipc.exceptions.NoDiscordClientException;
+import eu.diedullis.mod.discord.DiscordManager;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.client.MinecraftClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ExampleMod implements ModInitializer {
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
+public class DieDullisMod implements ModInitializer {
+
 	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
+	public DiscordManager discordManager = new DiscordManager();
 
 	@Override
 	public void onInitialize() {
